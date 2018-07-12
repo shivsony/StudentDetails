@@ -22,24 +22,25 @@ body {
     border: none;
     box-shadow: 1px 2px 0px 0px #b4b9c175;
 }
-.wrapper-card-list {
+ol {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    
 }
-.level {
+
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+li {
     width: 30%;
+    list-style-type: none;
+    text-align: left;
+    padding: 1%;
+    margin-left:  1%;
 }
-@media screen and (min-width: 768) {
-    button {
-    margin: 5%;
-    padding: 2%;
-    color: #fff;
-    font-size: 20px;
-    font-weight: 500;
-    background: #2874f0;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
-    border: none;
-    cursor: pointer;
-}
+.backtodashboard {
+    padding: 3%
 }

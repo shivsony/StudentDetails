@@ -3,7 +3,6 @@
     <head>
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="StudentList.css">
-        <script src="StudentList.js"></script>
     </head>
     <body>
         <div class="student-dashboard-wrapper">
@@ -11,18 +10,18 @@
                 <h3>STUDENT DETAILS</h3>
             </header>
             <div class="wrapper-card">
-                <div class="wrapper-card-list">
-                    <div class="level">Name</div>
-                    <div class="level">Email</div>
-                    <div class="level">Mobile No.</div>
-                </div>
                 <hr/>
-                <div class="wrapper-card-list">
-                    <div id="list1" class="level"></div>
-                    <div id="list2" class="level"></div>
-                    <div id="list3" class="level"></div>
-                </div>
+                <ol class="wrapper-card-list">
+                    <li>Name</li>
+                    <li>Email</li>
+                    <li>Mobile No.<li>
+                </ol>
                 <hr/>
+                <ul></ul>
+                <script src="StudentList.js"></script>
+            </div>
+            <div class="backtodashboard">
+                <a href="StudentDashboard.html">Go To Dashboard</a>
             </div>
         </div>
     </body>

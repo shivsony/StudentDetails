@@ -1,10 +1,15 @@
-window.onload = function() {
+const data = JSON.parse(localStorage.getItem('items'));
 
-    var retrievedData = localStorage.getItem("quentinTarantino"); 
+const ul = document.querySelector('ul');
 
-    var list = JSON.parse(retrievedData);
-    
-    document.getElementById("list1").innerHTML = list[0].name;
-    document.getElementById("list2").innerHTML = list[0].email;
-    document.getElementById("list3").innerHTML = list[0].mob;
+const liMaker = (text) => {
+  const li = document.createElement('li');
+  li.textContent = text;
+  ul.appendChild(li);
+}
+
+for(var i = 0 ;i<data.length;i++){
+  liMaker(data[i].name);
+  liMaker(data[i].email);
+  liMaker(data[i].mob);
 }

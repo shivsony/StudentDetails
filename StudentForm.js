@@ -1,16 +1,26 @@
+const form = document.querySelector('form');
+const input1 = document.getElementById('name');
+const input2 = document.getElementById("email");
+const input3 = document.getElementById("mob");
+
 function Student(name,email,mob) {
     this.name = name;
     this.email = email;
     this.mob = mob;
 }
-if (arr === arr || arr === null || arr.length === 0) {
-    var arr = new Array();
-}
 
-function NewOb() {
-    var Name = document.getElementById("name").value
-    var Email = document.getElementById("email").value
-    var Mob = document.getElementById("mob").value
-    arr.push(new Student(Name,Email,Mob) );
-    localStorage.setItem("quentinTarantino", JSON.stringify(arr));    
-}
+let itemsArray = localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items')) : [];
+
+
+localStorage.setItem('items', JSON.stringify(itemsArray));
+//const data = JSON.parse(localStorage.getItem('items'));
+
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  itemsArray.push(new Student(input1.value,input2.value,input3.value));
+  localStorage.setItem('items', JSON.stringify(itemsArray));
+  input1.value = "";
+  input2.value = "";
+  input3.value = "";
+});

@@ -31,16 +31,3 @@ body {
     margin: 2%;
     padding: 2%;
 }
-@media screen and (min-width: 768) {
-    button {
-    margin: 5%;
-    padding: 2%;
-    color: #fff;
-    font-size: 20px;
-    font-weight: 500;
-    background: #2874f0;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
-    border: none;
-    cursor: pointer;
-}
-}
